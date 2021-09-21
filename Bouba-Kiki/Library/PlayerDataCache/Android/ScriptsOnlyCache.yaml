@@ -10,13 +10,10 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -67,7 +64,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4332}
     - Class: 114
-      Script: {instanceID: 21988}
+      Script: {instanceID: 5442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -96,13 +93,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 2620}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3000}
     - Class: 114
       Script: {instanceID: 3244}
     - Class: 114
@@ -143,7 +140,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 39524}
+      Script: {instanceID: 3710}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -451,6 +448,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinMenu
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -673,6 +676,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: ae7ed43557502416630c4d07f2660a2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangingManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -695,18 +704,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: ae7ed43557502416630c4d07f2660a2f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangingManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WinMenu
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
