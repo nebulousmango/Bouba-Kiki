@@ -5,15 +5,31 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-
     TextMeshProUGUI scoreDisplay;
+    int i_score = 0;
+
+    private void OnEnable()
+    {
+        EventManager.OnObjectFall += ChangeScore;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnObjectFall -= ChangeScore;
+    }
+
+    void ChangeScore()
+    {
+        i_score++;
+        ChangeText("Score: " + i_score);
+    }
 
     void Start()
     {
         TextMeshProUGUI scoreDisplay = GetComponent<TextMeshProUGUI>();
     }
 
-    public void ChangeText(string text)
+    void ChangeText(string text)
     {
         TextMeshProUGUI scoreDisplay = GetComponent<TextMeshProUGUI>();
         scoreDisplay.text = text;

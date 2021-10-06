@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.141, y: -65}
-  m_SizeDelta: {x: 385.373, y: 152.749}
+  m_AnchoredPosition: {x: -0.78648, y: -133.231}
+  m_SizeDelta: {x: 377.663, y: 136.288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7461213
 MonoBehaviour:
@@ -183,10 +183,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.47072318, b: 0.23844782, a: 1}
-    m_PressedColor: {r: 0.6431373, g: 0.47058824, b: 0.23921569, a: 1}
-    m_SelectedColor: {r: 0.6431373, g: 0.47058827, b: 0.2392157, a: 1}
-    m_DisabledColor: {r: 0.6431373, g: 0.47058827, b: 0.2392157, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.15294118, g: 0.38431373, b: 0.73333335, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.05
   m_SpriteState:
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c89dabf0a3f03a4297537c8939ae05a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 885bd9d1b686e39418b90bde7d792125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000088215, y: -222}
-  m_SizeDelta: {x: 385.373, y: 152.749}
+  m_AnchoredPosition: {x: -0.78645, y: -318.539}
+  m_SizeDelta: {x: 381.52, y: 140.403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592376832
 MonoBehaviour:
@@ -315,10 +315,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6415094, g: 0.47072318, b: 0.23844782, a: 1}
-    m_PressedColor: {r: 0.6431373, g: 0.47058824, b: 0.23921569, a: 1}
-    m_SelectedColor: {r: 0.6431373, g: 0.47058827, b: 0.2392157, a: 1}
-    m_DisabledColor: {r: 0.6431373, g: 0.47058827, b: 0.2392157, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.15294118, g: 0.38431373, b: 0.73333335, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.05
   m_SpriteState:
@@ -339,7 +339,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1812644125}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: LoadLevelB
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 357b05e9f5a09214d8bb8d636874f076, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcd8e733f62ae2c4f999cebb86917039, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -527,7 +527,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af75a94e592b5e14d93e75a571ced217, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c8d62e852282234a957b4999c33943c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   S_LevelA: Level02
-  S_LevelB: 
+  S_LevelB: MainMenu
   S_LevelC: 
 --- !u!114 &1812644126
 MonoBehaviour:

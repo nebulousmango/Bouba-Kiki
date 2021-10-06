@@ -6,13 +6,11 @@ using UnityEngine;
 public class TouchShape : MonoBehaviour
 {
     private new Collider2D collider2D;
-    private TouchScriptSwitch touchSwitch;
     [HideInInspector] public static int shapeSequence;
 
     void Start()
     {
         collider2D = GetComponent<Collider2D>();
-        touchSwitch = GetComponent<TouchScriptSwitch>();
         shapeSequence = 0;
     }
 
@@ -25,18 +23,31 @@ public class TouchShape : MonoBehaviour
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-
             var wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             var touchPosition = new Vector2(wp.x, wp.y);
 
             if (collider2D == Physics2D.OverlapPoint(touchPosition))
             {
                 shapeSequence++;
-                Debug.Log(shapeSequence);
             }
             else
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("FailMenu01");
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            var wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var touchPosition = new Vector2(wp.x, wp.y);
+
+            if (collider2D == Physics2D.OverlapPoint(touchPosition))
+            {
+                shapeSequence++;
+            }
+            else
+            {
+                SceneManager.LoadScene("FailMenu01");
             }
         }
     }

@@ -148,7 +148,7 @@ public class ChangingManager : MonoBehaviour
 
         if (sequenceNumber == 10)
         {
-            SceneManager.LoadScene("WinMenu");
+            SceneManager.LoadScene("WinMenu01");
         }
     }
 }
