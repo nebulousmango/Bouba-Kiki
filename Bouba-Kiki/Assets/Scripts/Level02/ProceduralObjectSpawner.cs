@@ -6,6 +6,7 @@ public class ProceduralObjectSpawner : MonoBehaviour
 {
     List<Transform> lst_spawnPoints = new List<Transform>();
     int i_gravity = 0;
+    bool levelOver;
     [SerializeField] GameObject go_fallingObject;
 
     private void Start()
@@ -14,30 +15,40 @@ public class ProceduralObjectSpawner : MonoBehaviour
         {
             if(trans != transform) lst_spawnPoints.Add(trans);
         }
+        levelOver = FindObjectOfType<TouchInput>().levelOver;
         InstantiateRandom();
     }
 
     void InstantiateRandom()
     {
-        int spawnPointNumber = Random.Range(0, lst_spawnPoints.Count);
-        GameObject currentFallingObject = Instantiate(go_fallingObject, lst_spawnPoints[spawnPointNumber]);
-        currentFallingObject.transform.SetParent(lst_spawnPoints[spawnPointNumber]);
+        if (levelOver == false)
+        {
+            int spawnPointNumber = Random.Range(0, lst_spawnPoints.Count);
+            GameObject currentFallingObject = Instantiate(go_fallingObject, lst_spawnPoints[spawnPointNumber]);
+            currentFallingObject.transform.SetParent(lst_spawnPoints[spawnPointNumber]);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<FallingObject>())
+        if (levelOver == false)
         {
-            FindObjectOfType<EventManager>().ObjectFallEvent();
-            RespawnFallingObject(other.gameObject);
+            if (other.gameObject.GetComponent<FallingObject>())
+            {
+                FindObjectOfType<EventManager>().ObjectFallEvent();
+                RespawnFallingObject(other.gameObject);
+            }
         }
     }
 
     void RespawnFallingObject(GameObject go)
     {
-        int spawnPointNumber = Random.Range(0, lst_spawnPoints.Count);
-        go.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        go.GetComponent<FallingObject>().ChangeGravity(i_gravity);
-        go.transform.position = lst_spawnPoints[spawnPointNumber].position;
+        if (levelOver == false)
+        {
+            int spawnPointNumber = Random.Range(0, lst_spawnPoints.Count);
+            go.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            go.GetComponent<FallingObject>().ChangeGravity(i_gravity);
+            go.transform.position = lst_spawnPoints[spawnPointNumber].position;
+        }
     }
 }

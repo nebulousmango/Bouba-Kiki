@@ -42,21 +42,21 @@ public class TouchShapeMain : MonoBehaviour
             }
         }
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    var wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //    var touchPosition = new Vector2(wp.x, wp.y);
+        if (Input.GetMouseButtonDown(0))
+        {
+            var wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var touchPosition = new Vector2(wp.x, wp.y);
 
-        //    if (collider2D == Physics2D.OverlapPoint(touchPosition))
-        //    {
-        //        FindObjectOfType<TouchEvent>().CorrectShapeEvent();
-        //    }
+            if (collider2D == Physics2D.OverlapPoint(touchPosition))
+            {
+                FindObjectOfType<TouchEvent>().CorrectShapeEvent();
+            }
 
-        //    else
-        //    {
-        //        if (isInfiniteLevel) SceneManager.LoadScene(failScene);
-        //        else FindObjectOfType<TimeManager>().LevelOver();
-        //    }
-        //}
+            else
+            {
+                if (isInfiniteLevel) SceneManager.LoadScene(failScene);
+                else FindObjectOfType<TimeManager>().LevelOver();
+            }
+        }
     }
 }
